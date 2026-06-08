@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digital University Student Portal</title>
+
+<style>
+body{
+    margin:0;
+    background:#e5e5e5;
+    font-family:Arial, sans-serif;
+}
+
+.header{
+    background:white;
+    padding:20px;
+    border-bottom:4px solid #c89b3c;
+}
+
+.header h1{
+    margin:0;
+    color:#c6842b;
+    font-size:38px;
+}
+
+.header p{
+    margin:5px 0 0;
+    color:#666;
+}
+
+.login-title{
+    background:white;
+    color:#8b0000;
+    font-size:32px;
+    font-weight:bold;
+    padding:15px;
+    margin-top:5px;
+}
+
+.container{
+    width:90%;
+    max-width:700px;
+    margin:60px auto;
+    background:white;
+    padding:40px;
+    border:1px solid #ccc;
+    box-shadow:0 0 15px rgba(0,0,0,0.15);
+}
+
+.row{
+    margin:20px 0;
+}
+
+label{
+    display:inline-block;
+    width:180px;
+    font-weight:bold;
+    font-size:18px;
+}
+
+input{
+    width:300px;
+    padding:10px;
+    border:2px solid #c44;
+    font-size:16px;
+}
+
+button{
+    margin-left:185px;
+    padding:12px 40px;
+    background:#555;
+    color:white;
+    border:none;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    background:#222;
+}
+
+.footer{
+    margin-top:80px;
+    text-align:center;
+    color:#666;
+    font-size:14px;
+}
+
+.notice{
+    margin-top:15px;
+    color:red;
+    text-align:center;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+    <h1>Digital University</h1>
+    <p>Student Portal</p>
+</div>
+
+<div class="login-title">
+    Login Here
+</div>
+
+<div class="container">
+
+    <div class="row">
+        <label>PRN / UserName</label>
+        <input type="text" id="prn">
+    </div>
+
+    <div class="row">
+        <label>Password</label>
+        <input type="password" id="pass">
+    </div>
+
+    <button onclick="login()">Login</button>
+
+    <div class="notice" id="msg"></div>
+
+</div>
+
+<div class="footer">
+    <p>© 2026 Digital University. All Rights Reserved.</p>
+    <p>Student Portal • Academic Services • Examination Section</p>
+</div>
+
+<script>
+
+function login(){
+
+    const prn = document.getElementById("prn").value.trim();
+    const pass = document.getElementById("pass").value.trim();
+
+    if(
+        prn === "2019033700023202" &&
+        pass === "Pass@190600"
+    ){
+        window.location.href = "Msc.%20Chem%20sem-I.pdf";
+    }
+    else{
+        document.getElementById("msg").innerHTML =
+        "Invalid PRN or Password";
+    }
+}
+
+</script>
+
+</body>
+</html>
