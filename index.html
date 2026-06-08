@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Digital University Student Portal</title>
+
+<style>
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:#e5e5e5;
+}
+
+.header{
+background:#fff;
+padding:20px;
+border-bottom:4px solid #c89b3c;
+}
+
+.header h1{
+margin:0;
+color:#c6842b;
+font-size:32px;
+}
+
+.header p{
+margin:5px 0 0;
+color:#666;
+}
+
+.loginhead{
+background:#fff;
+padding:12px 20px;
+font-size:20px;
+font-weight:bold;
+color:#8b0000;
+margin-top:5px;
+}
+
+.box{
+width:90%;
+max-width:650px;
+margin:60px auto;
+background:#fff;
+padding:40px;
+border:1px solid #ccc;
+box-shadow:0 0 10px rgba(0,0,0,0.15);
+}
+
+.row{
+margin:20px 0;
+}
+
+label{
+display:inline-block;
+width:180px;
+font-weight:bold;
+}
+
+input{
+width:250px;
+padding:10px;
+border:2px solid #c44;
+}
+
+button{
+padding:10px 35px;
+margin-left:185px;
+background:#444;
+color:#fff;
+border:none;
+cursor:pointer;
+}
+
+button:hover{
+background:#111;
+}
+
+#msg{
+margin-top:15px;
+text-align:center;
+color:red;
+}
+
+.footer{
+text-align:center;
+margin-top:60px;
+padding:20px;
+color:#666;
+font-size:13px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+<h1>Digital University</h1>
+<p>Student Portal</p>
+</div>
+
+<div class="loginhead">
+Login Here
+</div>
+
+<div class="box">
+
+<div class="row">
+<label>PRN / UserName</label>
+<input type="text" id="prn">
+</div>
+
+<div class="row">
+<label>Password</label>
+<input type="password" id="pass">
+</div>
+
+<button onclick="login()">Login</button>
+
+<div id="msg"></div>
+
+</div>
+
+<div class="footer">
+© 2026 Digital University. All Rights Reserved.<br>
+Student Portal | Examination Section | Academic Services
+</div>
+
+<script>
+function login(){
+
+let prn=document.getElementById("prn").value.trim();
+let pass=document.getElementById("pass").value.trim();
+
+if(
+prn==="2019033700023202" &&
+pass==="Pass@190600"
+){
+window.location.href="https://gondwana-university.github.io/Student-login/Msc.%20Chem%20sem-l.pdf";
+}
+else{
+document.getElementById("msg").innerHTML="Invalid PRN or Password";
+}
+}
+</script>
+
+</body>
+</html>
